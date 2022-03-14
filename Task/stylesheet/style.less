@@ -3,27 +3,40 @@
   to {opacity: 1;}
 }
 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px #ccc; 
+  border-radius: 5px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #f5812f; 
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff7600; 
+}
+
 body {
   font-family: 'DM Sans', sans-serif;
-  
+  background-color: #FAF9F6;
 }
 
 #chatbot-id {
   position: fixed;
   bottom: 0;
-  right: 0;
+  right: 10px;
   width: 100%;
-  max-width: 350px;
+  max-width: 426px;
+  border-radius: 20px;
+  height: 500px;
+  @media (max-width: 426px) {
+    top: 10px;
+    left: 10px;
+    height: 100vh !important;
+  }
 }
 
-#chatbot-wrapper {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 350px;
-  height: 350px;
-  background-color: red;
-}
 
 .mainDiv {
 #a,#b,#c,#d,#e,#f,#g,#h, #i {
@@ -43,9 +56,16 @@ body {
   }
   .appName {
     align-self: center;
+    font-size: 24px;
+    @media (max-width:426px) {
+      font-size: 22px;
+    }
+    @media (max-width:376px) {
+      font-size: 20px;
+    }
   }
   .TitleText {
-    font-size: 28px;
+    font-size: 24px;
     @media (max-width:426px) {
       font-size: 22px;
     }
@@ -64,6 +84,7 @@ body {
   background-color: #fff;
   padding: 30px;
   position: relative;
+ 
   #c {
     animation-duration: 2s;
     animation-delay: 4s;
