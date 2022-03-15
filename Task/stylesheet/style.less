@@ -7,16 +7,15 @@
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background-color: #FAF9F6;
+  background-color: #F2F8FA;
 }
 
 #chatbot-id {
   position: fixed;
-  bottom: 0;
-  // top: 10px;
+  bottom: 10px;
   right: 10px;
   width: 100%;
-  max-width: 460px;
+  max-width: 440px;
   border-radius: 20px;
   height: 600px;
   @media (max-width: 426px) {
@@ -30,7 +29,7 @@ body {
 .mainDiv {
   padding-bottom: 20px;
   border-radius: 20px;
-  
+
   #a,#b,#c,#d,#e,#f,#g,#h, #i {
   opacity: 0;
   animation-fill-mode: forwards;
@@ -85,23 +84,10 @@ body {
   border-radius: 20px;
   margin: -110px 30px 30px 30px;
   background-color: #fff;
-  padding: 30px 20px 20px;
+  padding: 40px 20px 20px;
   position: relative;
-//  height: 360px;
-//  overflow: auto;
- &::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 2px #ccc; 
-  border-radius: 5px;
-}
- 
-&::-webkit-scrollbar-thumb {
-  background: #f5812f; 
-  border-radius: 5px;
-}
 
-&::-webkit-scrollbar-thumb:hover {
-  background: #ff7600; 
-}
+ 
   #c {
     animation-duration: 2s;
     animation-delay: 3s;
@@ -123,6 +109,7 @@ body {
     height: 70px;
     width: 70px;
     margin-top: 5px;
+    z-index: 9;
     @media (max-width: 426px) {
       margin-top: 0px;
       top: -40px;
@@ -141,6 +128,24 @@ body {
       
     }
   }
+  .fixheight {
+    height: 309px;
+    overflow: auto;
+
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 1px #ccc; 
+      border-radius: 5px;
+    }
+     
+    &::-webkit-scrollbar-thumb {
+      background: #f5812f; 
+      border-radius: 5px;
+    }
+    
+    &::-webkit-scrollbar-thumb:hover {
+      background: #ff7600; 
+    }
+    
   .marginTop {
     margin-top: 0px;
     @media (max-width: 426px) {
@@ -242,7 +247,7 @@ body {
     animation-duration: 2s;
     animation-delay: 8s;
   }
-
+  }
 }
 }
 
